@@ -8,7 +8,7 @@ const App = () => {
   const [message, setMessage] = useState('');
   // State to store the amount entered by the user for deposit/withdrawal
   const [amount, setAmount] = useState('');
-  // NEW STATE: State to store a list of transactions
+  // State to store a list of transactions
   // Each transaction will be an object { type: 'deposit' | 'withdraw', amount: number, date: string }
   const [transactions, setTransactions] = useState([]);
 
@@ -158,7 +158,7 @@ const App = () => {
           </button>
         </div>
 
-        {/* Message Display Area - Colors are already distinct for success/error */}
+        {/* Message Display Area */}
         {message && (
           <div
             className={`p-4 rounded-lg text-center font-medium ${
@@ -170,7 +170,7 @@ const App = () => {
           </div>
         )}
 
-        {/* Transaction History - Subtle color backgrounds for items */}
+        {/* Transaction History */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Transaction History</h2>
           {transactions.length === 0 ? (
